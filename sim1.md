@@ -69,7 +69,7 @@ Simulates:
 
 **AHU Flow Path:**
 <p align="center">
-  <img src="Sim1 Airflow.png" alt="SIM‑1 Airflow Diagram" width="90%" />
+  <img src="sim1_airflow.png" alt="SIM‑1 Airflow Diagram" width="90%" />
 </p>
 <p align="center"><em>Figure 1 — SIM‑1 Digital Twin Airflow</em></p>
 **Figure 2 — Airflow and Coil Sequence**
