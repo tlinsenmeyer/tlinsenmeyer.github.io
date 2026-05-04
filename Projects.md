@@ -1,29 +1,70 @@
+---
+title: "Projects"
+description: "Engineering, simulation, and data science projects."
+layout: default
+---
+
+<nav>
+  <ul>
+    <li><a href="index.md">Home</a></li>
+    <li><a href="about.md">About Me</a></li>
+    <li><a href="projects.md">Projects</a></li>
+    <li><a href="contact.md">Contact</a></li>
+  </ul>
+</nav>
+
+<p align="center">
+  <img src="banner.png" alt="Portfolio Banner" width="100%" />
+</p>
+
+---
+
 # Projects
 
-This page highlights the projects I’ve completed across data science, analytics, simulation, and applied machine learning. Each project includes a short summary and a link to a full write-up.
+Below is a curated selection of my engineering, simulation, and data science work.  
+Each project includes a summary and a link to the full write-up.
 
 ---
 
-## SIM-1 Digital Twin (Flagship Project)
-A physics-based HVAC digital twin that simulates real equipment behavior, control logic, and environmental conditions. Includes coil physics, steam humidification, fan curves, and Python translations of real BAS control programs.
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
 
-[Read more](sim1.md)
+  <div style="background:#1A1A1A; padding:20px; border-radius:8px; border:1px solid #2EC4B6;">
+    <h3 style="color:#00AEEF;">SIM-1 Digital Twin</h3>
+    <p style="color:#C0C0C0;">A full-physics HVAC digital twin for testing real control logic, coil dynamics, and system behavior.</p>
+    <a href="sim1.md" style="color:#2EC4B6;">Read more ?</a>
+  </div>
 
----
+  <div style="background:#1A1A1A; padding:20px; border-radius:8px; border:1px solid #2EC4B6;">
+    <h3 style="color:#00AEEF;">Predictive Occupancy Modeling</h3>
+    <p style="color:#C0C0C0;">Machine learning models predicting room occupancy using environmental sensor data.</p>
+    <a href="occupancy.md" style="color:#2EC4B6;">Read more ?</a>
+  </div>
 
-## Predictive Occupancy Modeling (DSC 630)
-Machine learning models (Linear Regression, KNN, Random Forest, SVM with CUDA acceleration) used to predict room occupancy from environmental sensor data.
+  <div style="background:#1A1A1A; padding:20px; border-radius:8px; border:1px solid #2EC4B6;">
+    <h3 style="color:#00AEEF;">USDA Barley Market Analysis</h3>
+    <p style="color:#C0C0C0;">Large-scale data cleaning and analysis of USDA feed-grain datasets with web scraping.</p>
+    <a href="barley.md" style="color:#2EC4B6;">Read more ?</a>
+  </div>
 
-[Read more](occupancy.md)
+  <div style="background:#1A1A1A; padding:20px; border-radius:8px; border:1px solid #2EC4B6;">
+    <h3 style="color:#00AEEF;">Climate Change & Hop Production</h3>
+    <p style="color:#C0C0C0;">Statistical analysis of Yakima climate trends and hop yields from 2000–2024.</p>
+    <a href="hops.md" style="color:#2EC4B6;">Read more ?</a>
+  </div>
 
----
+  <div style="background:#1A1A1A; padding:20px; border-radius:8px; border:1px solid #2EC4B6;">
+    <h3 style="color:#00AEEF;">Retail Sales Forecasting</h3>
+    <p style="color:#C0C0C0;">Time-series forecasting using Linear Regression and Prophet with RMSE comparisons.</p>
+    <a href="retail.md" style="color:#2EC4B6;">Read more ?</a>
+  </div>
 
-## Barley Market & USDA Data Analysis (DSC 540)
-Large-scale data cleaning, filtering, and analysis of USDA feed grain datasets. Includes web scraping, time-series extraction, and commodity-specific filtering.
+  <div style="background:#1A1A1A; padding:20px; border-radius:8px; border:1px solid #2EC4B6;">
+    <h3 style="color:#00AEEF;">RAG System with LangChain</h3>
+    <p style="color:#C0C0C0;">A retrieval-augmented generation pipeline using ChromaDB and OpenAI embeddings.</p>
+    <a href="rag.md" style="color:#2EC4B6;">Read more ?</a>
+  </div>
 
-[Read more](barley.md)
-
----
+</div>
 
 ---
 
