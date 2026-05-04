@@ -38,3 +38,14 @@ This project built a retrieval‑augmented generation (RAG) pipeline to answer q
 
 RAG is becoming a standard approach for enterprise AI systems. This project shows how retrieval can improve reliability and reduce hallucinations.
 
+---
+
+<p align="center" style="color:#C0C0C0; font-size: 0.9em;">
+  <span style="color:#00AEEF;">●</span>
+  Engineering • Simulation • Machine Learning
+  <span style="color:#00AEEF;">●</span><br>
+  <span style="color:#2EC4B6;">Designing Smarter Systems</span><br><br>
+  <span style="color:#777777;">© 2026 Tom Linsenmeyer</span>
+</p>
+
+

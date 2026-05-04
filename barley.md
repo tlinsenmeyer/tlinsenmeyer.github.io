@@ -37,3 +37,12 @@ This project focused on cleaning and analyzing a large USDA feed‑grains datase
 
 This project demonstrates large‑scale data cleaning, filtering, and integration — skills that translate directly to real‑world analytics work.
 
+---
+
+<p align="center" style="color:#C0C0C0; font-size: 0.9em;">
+  <span style="color:#00AEEF;">●</span>
+  Engineering • Simulation • Machine Learning
+  <span style="color:#00AEEF;">●</span><br>
+  <span style="color:#2EC4B6;">Designing Smarter Systems</span><br><br>
+  <span style="color:#777777;">© 2026 Tom Linsenmeyer</span>
+</p>
