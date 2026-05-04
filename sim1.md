@@ -1,6 +1,6 @@
 ---
 title: "SIM‑1 Digital Twin"
-description: "A full‑physics HVAC digital twin for testing real control logic, coil dynamics, and system behavior."
+description: "A full‑physics HVAC digital twin integrating control logic, physics modeling, and MLOps pipelines."
 layout: default
 ---
 
@@ -20,101 +20,190 @@ layout: default
 ---
 
 # SIM‑1 Digital Twin  
-*A physics‑based HVAC simulation environment for testing real control logic.*
+*A physics‑based HVAC simulation environment with integrated machine learning and MLOps workflows.*
 
-SIM‑1 is a digital twin of a real air‑handling unit (AHU) designed to simulate HVAC behavior with engineering accuracy. It allows safe testing of control logic, coil dynamics, freeze protection, humidity control, and system interactions without risking real equipment.
-
-This project blends **mechanical engineering**, **control systems**, and **data science** into one unified system.
+SIM‑1 is a digital twin of a real air‑handling unit (AHU). It combines **mechanical engineering**, **control systems**, **data engineering**, and **machine learning** into a unified simulation platform. The system models coil heat transfer, valve dynamics, humidity control, freeze protection, and real control logic — all while generating telemetry for ML training and optimization.
 
 ---
 
-# 🎯 Project Goals
+# 1. System Architecture
 
-SIM‑1 was built to:
+<p align="center">
+  <img src="sim1_architecture.png" width="90%" />
+</p>
 
-- Model HVAC equipment using **real physics**, not approximations  
-- Test **Plain English control logic** (Schneider Electric) in a safe environment  
-- Validate coil behavior, valve response, and freeze‑stat protection  
-- Provide realistic telemetry for machine learning and analytics  
-- Serve as a foundation for future digital twin and BAS optimization work  
+<p align="center"><em>Figure 1 — SIM‑1 System Architecture</em></p>
+
+SIM‑1 consists of four core subsystems:
+
+- **AHUModel (Physics Engine)** — simulates coil UA, valve Cv, steam humidification, fan heat, and psychrometrics.  
+- **AHUEngine (Control Logic)** — executes translated Schneider Electric Plain English logic.  
+- **Simulation Loop** — coordinates timestep updates between physics and control.  
+- **Trend Logging** — captures temperatures, humidity, valve positions, coil LAT, and fault alerts.
+
+These components form the real‑time simulation environment.
 
 ---
 
-# 🧱 System Architecture
-
-SIM‑1 is structured into modular subsystems:
+# 2. Mechanical Airflow & Coil Sequence
 
 <p align="center">
-  <img src="Sim1 Architecture.png" alt="SIM‑1 Architecture Diagram" width="90%" />
+  <img src="sim1_airflow.png" width="90%" />
 </p>
-<p align="center"><em>Figure 1 — SIM‑1 Digital Twin Architecture</em></p>
 
-This diagram illustrates the full architecture of the SIM‑1 Digital Twin. The upper layer represents the real‑time simulation environment, where the AHUModel computes coil heat transfer, valve flow, humidification, fan heat, and psychrometric properties. The AHUEngine executes translated Schneider Electric Plain English control logic, including cooling, preheat, humidity, and freeze‑protection loops.
+<p align="center"><em>Figure 2 — Airflow and Coil Sequence</em></p>
 
-The simulation loop coordinates timestep updates, passing state variables between physics and control. Trend Logging captures temperatures, valve positions, humidity, coil LAT, and fault alerts for analysis.
+This diagram illustrates the physical path of air through the AHU:
 
-The lower layer represents the data science and optimization stack. Historical trend data is ingested and engineered for model training. LSTM models predict coil leaving‑air temperature, reinforcement learning optimizes control policy, and parameter calibration tunes UA and Cv values. Condition monitoring and FDD detect anomalies, while optimized policies feed back into the AHUEngine for improved performance.
+**Outside Air → Filter → Preheat Coil → Cooling Coil → Steam Humidifier → Supply Fan → Discharge Air**
 
+SIM‑1 models heat transfer, humidity changes, and fan energy at each stage, enabling realistic coil and valve behavior under varying outdoor conditions.
 
+---
 
-### **1. AHUModel (Physics Engine)**
-Simulates:
+# 3. Control Logic Flow
 
-- Coil heat transfer (UA model)  
-- Valve Cv behavior  
-- Steam humidifier dynamics  
-- Fan heat  
-- Psychrometrics (enthalpy, humidity ratio, dewpoint)  
-- 100% outside air (no mixed air)
-
-**AHU Flow Path:**
 <p align="center">
-  <img src="sim1_airflow.png" alt="SIM‑1 Airflow Diagram" width="90%" />
+  <img src="sim1_control_flow.png" width="90%" />
 </p>
-<p align="center"><em>Figure 2 — SIM‑1 Digital Twin Airflow</em></p>
-**Figure 2 — Airflow and Coil Sequence**
 
-This diagram illustrates the mechanical path of air through the simulated AHU. SIM‑1 models heat transfer, humidity changes, and fan energy at each stage, enabling realistic coil and valve behavior under varying outdoor conditions.
-  
+<p align="center"><em>Figure 3 — Control Logic Flow</em></p>
 
-### **2. AHUEngine (Control Logic Runner)**
-Executes translated Plain English logic:
+The AHUEngine executes real HVAC control logic:
 
 - Cooling loop  
 - Preheat loop  
-- Humidifier loop  
+- Humidity loop  
 - Freeze protection  
-- Mode switching (HEAT / COOL)
+- Mode switching (HEAT/COOL)  
 
-<p align="center">
-  <img src="sim1_control_flow.png" alt="SIM‑1 Control Flow Diagram" width="90%" />
-</p>
-<p align="center"><em>Figure 3 — SIM‑1 Digital Twin Control Flow</em></p>  
-**Figure 3 — Control Logic Flow**
-
-This diagram shows how SIM‑1 executes real HVAC control logic. Each loop evaluates conditions, modulates actuators, and receives updated physics feedback. Freeze protection overrides all other loops to maintain coil safety.
-
-
-### **3. Trend Logging**
-Generates EBO‑style logs:
-
-- Temperatures  
-- Valve positions  
-- Humidity  
-- Coil leaving air conditions  
-- Freeze‑stat behavior  
-
-### **4. Simulation Loop**
-Runs timestep‑based updates:
-
-- Physics → Control → Physics → Control  
-- Adjustable timestep for stability  
+Each loop evaluates conditions, modulates actuators, and receives updated physics feedback. Freeze protection overrides all other loops to maintain coil safety.
 
 ---
 
-# 🔧 Engineering Diagram (Described)
+# 4. Software‑Level Infrastructure
+
+<p align="center">
+  <img src="sim1_infrastructure.png" width="90%" />
+</p>
+
+<p align="center"><em>Figure 4 — SIM‑1 Infrastructure & Deployment Architecture</em></p>
 
 
+This diagram shows how SIM‑1 runs as a complete engineering platform. The simulation environment interacts with:
+
+- a Python runtime or containerized environment  
+- a scheduler/timestep engine  
+- a data lake connector  
+- a model‑serving endpoint  
+- calibration and optimization pipelines  
+
+This layer represents the **platform architecture** that supports simulation, data flow, and ML integration.
+
+---
+
+# 5. Full Data Pipeline
+
+<p align="center">
+  <img src="sim1_data_pipeline.png" width="90%" />
+</p>
+
+<p align="center"><em>Figure 5 — SIM‑1 Full Data Pipeline</em></p>
+<p align="center"><em>Figure X — SIM‑1 Full Data Pipeline</em></p>
+
+This diagram shows the complete data and machine learning pipeline that powers SIM‑1. Real AHU trend logs and synthetic telemetry from the digital twin flow into a preprocessing layer where data is cleaned, resampled, and engineered. The processed data is stored in a historical trend repository and used to train LSTM prediction models, reinforcement learning control policies, and anomaly detection models.
+
+Validated models are deployed through a serving layer that updates the AHUEngine with optimized control policies and calibrates physics parameters such as coil UA and valve Cv. New telemetry generated by the simulation feeds back into the data lake, creating a continuous improvement loop between physics, control logic, and machine learning.
 
 
+The SIM‑1 data pipeline includes:
 
+- **Data Sources:** real AHU logs + synthetic telemetry  
+- **Preprocessing:** cleaning, resampling, feature engineering  
+- **Storage:** historical trend repository  
+- **Model Training:** LSTM prediction, RL control policy, anomaly detection  
+- **Validation:** RMSE/MAE, scenario testing  
+- **Deployment:** model serving, policy export, parameter calibration  
+- **Feedback Loop:** new telemetry → retraining → optimization  
+
+This pipeline mirrors real‑world industrial ML workflows.
+
+---
+
+# 6. MLOps Alignment
+
+<p align="center">
+  <img src="sim1_mlops.png" width="90%" />
+</p>
+
+<p align="center"><em>Figure 6 — SIM‑1 MLOps Alignment</em></p>
+
+SIM‑1 demonstrates a full MLOps lifecycle:
+
+### **Data Engineering**
+- ingestion of real and synthetic trend logs  
+- cleaning, resampling, feature engineering  
+
+### **Model Training**
+- LSTM models for coil LAT prediction  
+- reinforcement learning for control optimization  
+- anomaly detection for FDD  
+
+### **Deployment**
+- model serving endpoint  
+- policy export to AHUEngine  
+- parameter calibration (UA, Cv)  
+
+### **Monitoring**
+- drift detection  
+- fault alerts  
+- performance metrics  
+
+### **Continuous Improvement**
+- retraining loop  
+- updated policies → AHUEngine  
+- updated parameters → AHUModel  
+
+SIM‑1 is not just a simulation — it is a **full MLOps platform**.
+
+---
+
+# 7. Results & Outputs
+
+SIM‑1 produces realistic telemetry:
+
+- supply air temperature tracking  
+- valve modulation curves  
+- humidity response  
+- freeze‑stat activation  
+- coil leaving air temperature dynamics  
+
+These outputs support:
+
+- control tuning  
+- fault detection  
+- ML model training  
+- optimization studies  
+
+---
+
+# 8. Future Work
+
+Planned enhancements:
+
+- VAV terminal units  
+- zone thermal models  
+- economizer logic  
+- chilled/hot water plant models  
+- real‑time dashboard  
+- ML‑driven supervisory control  
+
+---
+
+<p align="center" style="color:#C0C0C0; font-size: 0.9em;">
+  <span style="color:#00AEEF;">●</span>
+  Engineering • Simulation • Machine Learning
+  <span style="color:#00AEEF;">●</span><br>
+  <span style="color:#2EC4B6;">Designing Smarter Systems</span><br><br>
+  <span style="color:#777777;">© 2026 Tom Linsenmeyer</span>
+</p>
