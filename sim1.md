@@ -71,7 +71,7 @@ Simulates:
 <p align="center">
   <img src="sim1_airflow.png" alt="SIM‑1 Airflow Diagram" width="90%" />
 </p>
-<p align="center"><em>Figure 1 — SIM‑1 Digital Twin Airflow</em></p>
+<p align="center"><em>Figure 2 — SIM‑1 Digital Twin Airflow</em></p>
 **Figure 2 — Airflow and Coil Sequence**
 
 This diagram illustrates the mechanical path of air through the simulated AHU. SIM‑1 models heat transfer, humidity changes, and fan energy at each stage, enabling realistic coil and valve behavior under varying outdoor conditions.
@@ -89,7 +89,11 @@ Executes translated Plain English logic:
 <p align="center">
   <img src="sim1_control_flow.png" alt="SIM‑1 Control Flow Diagram" width="90%" />
 </p>
-<p align="center"><em>Figure 2 — SIM‑1 Digital Twin Control Flow</em></p>  
+<p align="center"><em>Figure 3 — SIM‑1 Digital Twin Control Flow</em></p>  
+**Figure 3 — Control Logic Flow**
+
+This diagram shows how SIM‑1 executes real HVAC control logic. Each loop evaluates conditions, modulates actuators, and receives updated physics feedback. Freeze protection overrides all other loops to maintain coil safety.
+
 
 ### **3. Trend Logging**
 Generates EBO‑style logs:
