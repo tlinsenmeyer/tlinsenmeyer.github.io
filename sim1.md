@@ -1,47 +1,86 @@
-# SIM‑1 Digital Twin
-
-SIM‑1 is a physics‑based HVAC digital twin I’m building to simulate the behavior of a real air‑handling unit and its control logic. The goal is to create a safe environment where I can test, tune, and improve control programs without touching live equipment.
-
-This project combines building automation, HVAC engineering, and data science. It models coil physics, steam humidification, fan curves, and environmental conditions, and it runs real control logic translated from Schneider Electric Plain English into Python.
-
+---
+title: "SIM‑1 Digital Twin"
+description: "A full‑physics HVAC digital twin for testing real control logic, coil dynamics, and system behavior."
+layout: default
 ---
 
-## What the System Does
+<nav>
+  <ul>
+    <li><a href="index.md">Home</a></li>
+    <li><a href="about.md">About Me</a></li>
+    <li><a href="projects.md">Projects</a></li>
+    <li><a href="contact.md">Contact</a></li>
+  </ul>
+</nav>
 
-- Models AHU behavior using full‑physics components  
-- Simulates heating, cooling, humidification, and freeze protection  
-- Runs real control logic in a modular Python architecture  
-- Generates trend logs similar to a BAS for analysis  
-- Allows testing of tuning changes without risk to equipment  
-
----
-
-## Technical Highlights
-
-- Python class‑based subsystem design  
-- Coil UA modeling  
-- Valve Cv modeling  
-- Steam humidifier physics  
-- Fan heat and performance curves  
-- Psychrometric calculations  
-- Modular control logic (Cooling, Preheat, Humidity, Freeze Protection)  
-
----
-
-## Why This Project Matters
-
-SIM‑1 lets me experiment with HVAC control strategies in a controlled environment. It’s a practical tool for understanding system behavior, testing ideas, and improving real‑world performance without downtime or risk.
-
-This is the most complex and ongoing project in my portfolio, and it reflects the kind of hands‑on, technical work I enjoy.
-
----
-
-<p align="center" style="color:#C0C0C0; font-size: 0.9em;">
-  <span style="color:#00AEEF;">●</span>
-  Engineering • Simulation • Machine Learning
-  <span style="color:#00AEEF;">●</span><br>
-  <span style="color:#2EC4B6;">Designing Smarter Systems</span><br><br>
-  <span style="color:#777777;">© 2026 Tom Linsenmeyer</span>
+<p align="center">
+  <img src="banner.png" alt="Portfolio Banner" width="100%" />
 </p>
 
+---
+
+# SIM‑1 Digital Twin  
+*A physics‑based HVAC simulation environment for testing real control logic.*
+
+SIM‑1 is a digital twin of a real air‑handling unit (AHU) designed to simulate HVAC behavior with engineering accuracy. It allows safe testing of control logic, coil dynamics, freeze protection, humidity control, and system interactions without risking real equipment.
+
+This project blends **mechanical engineering**, **control systems**, and **data science** into one unified system.
+
+---
+
+# 🎯 Project Goals
+
+SIM‑1 was built to:
+
+- Model HVAC equipment using **real physics**, not approximations  
+- Test **Plain English control logic** (Schneider Electric) in a safe environment  
+- Validate coil behavior, valve response, and freeze‑stat protection  
+- Provide realistic telemetry for machine learning and analytics  
+- Serve as a foundation for future digital twin and BAS optimization work  
+
+---
+
+# 🧱 System Architecture
+
+SIM‑1 is structured into modular subsystems:
+
+### **1. AHUModel (Physics Engine)**
+Simulates:
+
+- Coil heat transfer (UA model)  
+- Valve Cv behavior  
+- Steam humidifier dynamics  
+- Fan heat  
+- Psychrometrics (enthalpy, humidity ratio, dewpoint)  
+- 100% outside air (no mixed air)  
+
+### **2. AHUEngine (Control Logic Runner)**
+Executes translated Plain English logic:
+
+- Cooling loop  
+- Preheat loop  
+- Humidifier loop  
+- Freeze protection  
+- Mode switching (HEAT / COOL)  
+
+### **3. Trend Logging**
+Generates EBO‑style logs:
+
+- Temperatures  
+- Valve positions  
+- Humidity  
+- Coil leaving air conditions  
+- Freeze‑stat behavior  
+
+### **4. Simulation Loop**
+Runs timestep‑based updates:
+
+- Physics → Control → Physics → Control  
+- Adjustable timestep for stability  
+
+---
+
+# 🔧 Engineering Diagram (Described)
+
+**AHU Flow Path:**
 
