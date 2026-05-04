@@ -44,6 +44,11 @@ SIM‑1 was built to:
 
 SIM‑1 is structured into modular subsystems:
 
+<p align="center">
+  <img src="sim1_diagram.png" alt="SIM‑1 Architecture Diagram" width="90%" />
+</p>
+
+
 ### **1. AHUModel (Physics Engine)**
 Simulates:
 
