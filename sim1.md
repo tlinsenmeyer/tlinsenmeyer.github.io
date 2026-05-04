@@ -109,7 +109,7 @@ This layer represents the **platform architecture** that supports simulation, da
 </p>
 
 <p align="center"><em>Figure 5 — SIM‑1 Full Data Pipeline</em></p>
-<p align="center"><em>Figure X — SIM‑1 Full Data Pipeline</em></p>
+
 
 This diagram shows the complete data and machine learning pipeline that powers SIM‑1. Real AHU trend logs and synthetic telemetry from the digital twin flow into a preprocessing layer where data is cleaned, resampled, and engineered. The processed data is stored in a historical trend repository and used to train LSTM prediction models, reinforcement learning control policies, and anomaly detection models.
 
