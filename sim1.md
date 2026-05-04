@@ -47,6 +47,14 @@ SIM‑1 is structured into modular subsystems:
 <p align="center">
   <img src="Sim1 Architecture.png" alt="SIM‑1 Architecture Diagram" width="90%" />
 </p>
+<p align="center"><em>Figure 1 — SIM‑1 Digital Twin Architecture</em></p>
+
+This diagram illustrates the full architecture of the SIM‑1 Digital Twin. The upper layer represents the real‑time simulation environment, where the AHUModel computes coil heat transfer, valve flow, humidification, fan heat, and psychrometric properties. The AHUEngine executes translated Schneider Electric Plain English control logic, including cooling, preheat, humidity, and freeze‑protection loops.
+
+The simulation loop coordinates timestep updates, passing state variables between physics and control. Trend Logging captures temperatures, valve positions, humidity, coil LAT, and fault alerts for analysis.
+
+The lower layer represents the data science and optimization stack. Historical trend data is ingested and engineered for model training. LSTM models predict coil leaving‑air temperature, reinforcement learning optimizes control policy, and parameter calibration tunes UA and Cv values. Condition monitoring and FDD detect anomalies, while optimized policies feed back into the AHUEngine for improved performance.
+
 
 
 ### **1. AHUModel (Physics Engine)**
@@ -57,7 +65,17 @@ Simulates:
 - Steam humidifier dynamics  
 - Fan heat  
 - Psychrometrics (enthalpy, humidity ratio, dewpoint)  
-- 100% outside air (no mixed air)  
+- 100% outside air (no mixed air)
+
+**AHU Flow Path:**
+<p align="center">
+  <img src="Sim1 Airflow.png" alt="SIM‑1 Airflow Diagram" width="90%" />
+</p>
+<p align="center"><em>Figure 1 — SIM‑1 Digital Twin Airflow</em></p>
+**Figure 2 — Airflow and Coil Sequence**
+
+This diagram illustrates the mechanical path of air through the simulated AHU. SIM‑1 models heat transfer, humidity changes, and fan energy at each stage, enabling realistic coil and valve behavior under varying outdoor conditions.
+  
 
 ### **2. AHUEngine (Control Logic Runner)**
 Executes translated Plain English logic:
@@ -66,7 +84,12 @@ Executes translated Plain English logic:
 - Preheat loop  
 - Humidifier loop  
 - Freeze protection  
-- Mode switching (HEAT / COOL)  
+- Mode switching (HEAT / COOL)
+
+<p align="center">
+  <img src="sim1_control_flow.png" alt="SIM‑1 Control Flow Diagram" width="90%" />
+</p>
+<p align="center"><em>Figure 2 — SIM‑1 Digital Twin Control Flow</em></p>  
 
 ### **3. Trend Logging**
 Generates EBO‑style logs:
@@ -87,5 +110,7 @@ Runs timestep‑based updates:
 
 # 🔧 Engineering Diagram (Described)
 
-**AHU Flow Path:**
+
+
+
 
