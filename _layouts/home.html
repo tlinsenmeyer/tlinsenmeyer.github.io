@@ -1,13 +1,25 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
 
-<div class="hero">
-    <img src="{{ '/banner.png' | relative_url }}" class="hero-img" alt="Engineering Portfolio Banner">
-    <h1>Engineering | Simulation | Machine Learning</h1>
-    <h3>Designing Smarter Systems</h3>
-</div>
+    <header class="topnav">
+        <nav>
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="{{ '/About Me' | relative_url }}">About Me</a>
+            <a href="{{ '/Projects' | relative_url }}">Projects</a>
+            <a href="{{ '/contact' | relative_url }}">Contact</a>
+        </nav>
+    </header>
 
-<div class="content">
-    {{ content }}
-</div>
+    <main class="content">
+        {{ content }}
+    </main>
+
+</body>
+</html>
