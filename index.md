@@ -1,7 +1,7 @@
 ---
 title: "Tom Linsenmeyer — Portfolio"
 description: "Projects in HVAC simulation, data science, machine learning, and applied analytics."
-layout: default
+layout: home
 ---
 
 <nav>
@@ -13,26 +13,7 @@ layout: default
   </ul>
 </nav>
 
-<p align="center">
-  <img src="banner.png" alt="Portfolio Banner" width="100%" />
-</p>
-
-
 ---
-
-# Welcome
-
-[About](about.md) | [Projects](projects.md) | [Contact](contact.md)
-
----
-
-
-# Welcome
-
-[About](about.md) | [Projects](projects.md) | [Contact](contact.md)
-
----
-
 
 # Welcome
 
@@ -74,7 +55,7 @@ Ways to reach me professionally.
 
 ## Why I Built This Portfolio
 
-I wanted a place to organize the work I’ve done — not just the final results, but the process behind them. A lot of what I do blends engineering, programming, and adding more details about my projects and experience.
+I wanted a place to organize the work I’ve done — not just the final results, but the process behind them. A lot of what I do blends engineering, programming, and applied analytics, and this site gives me a place to show that work clearly.
 
 ---
 
@@ -85,3 +66,4 @@ I wanted a place to organize the work I’ve done — not just the final results
   <span style="color:#2EC4B6;">Designing Smarter Systems</span><br><br>
   <span style="color:#777777;">© 2026 Tom Linsenmeyer</span>
 </p>
+
