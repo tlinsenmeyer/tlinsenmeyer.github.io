@@ -48,7 +48,7 @@ Each project includes a summary and a link to the full write-up.
 
   <div style="background:#1A1A1A; padding:20px; border-radius:8px; border:1px solid #2EC4B6;">
     <h3 style="color:#00AEEF;">Climate Change & Hop Production</h3>
-    <p style="color:#C0C0C0;">Statistical analysis of Yakima climate trends and hop yields from 2000–2024.</p>
+    <p style="color:#C0C0C0;">Statistical analysis of Yakima climate trends and hop yields from 2000ï¿½2024.</p>
     <a href="hops.md" style="color:#2EC4B6;">Read more ?</a>
   </div>
 
@@ -70,8 +70,8 @@ Each project includes a summary and a link to the full write-up.
 
 <p align="center" style="color:#C0C0C0; font-size: 0.9em;">
   <span style="color:#00AEEF;">?</span>
-  Engineering • Simulation • Machine Learning
+  Engineeringâ€¢Simulationâ€¢Machine Learning
   <span style="color:#00AEEF;">?</span><br>
   <span style="color:#2EC4B6;">Designing Smarter Systems</span><br><br>
-  <span style="color:#777777;">© 2026 Tom Linsenmeyer</span>
+  <span style="color:#777777;">Â© 2026 Tom Linsenmeyer</span>
 </p>
