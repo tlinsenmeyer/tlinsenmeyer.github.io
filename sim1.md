@@ -1,23 +1,18 @@
 ---
 layout: home
 title: "SIM‑1 Digital Twin"
----
-
-
----
-title: "SIM‑1 Digital Twin"
 description: "A full‑physics HVAC digital twin integrating control logic, physics modeling, and MLOps pipelines."
-layout: default
 ---
 
 <nav>
   <ul>
-    <li><a href="index.md">Home</a></li>
-    <li><a href="about.md">About Me</a></li>
-    <li><a href="projects.md">Projects</a></li>
-    <li><a href="contact.md">Contact</a></li>
+    <li><a href="/index/">Home</a></li>
+    <li><a href="/about/">About Me</a></li>
+    <li><a href="/projects/">Projects</a></li>
+    <li><a href="/contact/">Contact</a></li>
   </ul>
 </nav>
+
 
 <p align="center">
   <img src="banner.png" alt="Portfolio Banner" width="100%" />

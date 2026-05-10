@@ -1,3 +1,10 @@
+---
+layout: home
+title: "Retail Forecasting"
+description: "Time‑series forecasting using Linear Regression and Prophet."
+---
+S
+
 # Retail Sales Forecasting
 
 This project used 30 years of U.S. retail sales data to build forecasting models. The goal was to predict monthly sales for the final year of the dataset.
