@@ -1,3 +1,9 @@
+---
+layout: home
+title: "Hops Analytics"
+---
+
+
 # Climate Change and Hop Production
 
 This project explored whether climate change is affecting hop production in Yakima, Washington — the largest hop‑producing region in the U.S.

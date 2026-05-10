@@ -1,3 +1,9 @@
+---
+layout: home
+title: "About Me"
+---
+
+
 My experience comes from building automation and HVAC systems, but over time I’ve gotten more interested in data, simulation, and the ways those tools can help solve real operational problems.
 
 I’m not locked into one specialty. I like learning new things, trying out ideas, and building projects that teach me something useful. Sometimes that means digging into Python, sometimes it means troubleshooting equipment, and sometimes it means experimenting with data science concepts to see how they apply to the real world.

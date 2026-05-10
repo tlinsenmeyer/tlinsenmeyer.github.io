@@ -1,3 +1,9 @@
+---
+layout: home
+title: "Occupancy Modeling"
+---
+
+
 # Predictive Occupancy Modeling
 
 This project uses environmental sensor data to predict room occupancy. The dataset included sound, temperature, light, CO₂, and PIR motion readings. The goal was to determine whether sensor data alone could reliably estimate how many people were in a room.

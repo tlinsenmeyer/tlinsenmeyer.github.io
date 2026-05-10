@@ -1,4 +1,10 @@
 ---
+layout: home
+title: "SIM‑1 Digital Twin"
+---
+
+
+---
 title: "SIM‑1 Digital Twin"
 description: "A full‑physics HVAC digital twin integrating control logic, physics modeling, and MLOps pipelines."
 layout: default

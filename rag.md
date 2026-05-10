@@ -1,3 +1,9 @@
+---
+layout: home
+title: "Developing RAG"
+---
+
+
 # RAG System with LangChain and Chroma
 
 This project built a retrieval‑augmented generation (RAG) pipeline to answer questions about Grok AI using only Wikipedia context.

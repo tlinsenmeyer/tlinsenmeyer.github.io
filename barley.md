@@ -1,3 +1,9 @@
+---
+layout: home
+title: "Barley Analytics"
+---
+
+
 # USDA Barley Market Analysis
 
 This project focused on cleaning and analyzing a large USDA feed‑grains dataset (over 500,000 rows). The goal was to isolate U.S. barley data and explore pricing trends using both CSV data and web‑scraped information.
