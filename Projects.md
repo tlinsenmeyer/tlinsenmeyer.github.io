@@ -1,7 +1,7 @@
 ---
 title: "Projects"
 description: "Engineering, simulation, and data science projects."
-layout: default
+layout: home
 ---
 
 # Projects
