@@ -1,11 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+
 <body>
 
-    <!-- Full-width Banner -->
+    <!-- ============================
+         Full‑Width Banner
+         ============================ -->
     <div class="banner-container">
-        <img src="{{ '/banner.png' | relative_url }}" class="banner-image">
+        <img src="{{ '/banner.png' | relative_url }}" 
+             alt="Engineering Simulation Machine Learning Banner"
+             class="banner-image">
     </div>
 
-    <!-- Navigation -->
+    <!-- ============================
+         Navigation
+         ============================ -->
     <header class="topnav">
         <nav>
             <a href="{{ '/' | relative_url }}">Home</a>
@@ -15,12 +31,16 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
+    <!-- ============================
+         Main Content Panel
+         ============================ -->
     <main class="content">
         {{ content }}
     </main>
 
-    <!-- Footer -->
+    <!-- ============================
+         Footer
+         ============================ -->
     <footer class="site-footer">
         <p>
             <span class="dot-blue">●</span>
@@ -32,3 +52,4 @@
     </footer>
 
 </body>
+</html>
