@@ -5,23 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
-
 </head>
 <body>
 
+    <!-- Banner -->
+    <div class="banner-container">
+        <img src="{{ '/banner.png' | relative_url }}" 
+             alt="Engineering Simulation Machine Learning Banner"
+             class="banner-image">
+    </div>
+
+    <!-- Navigation -->
     <header class="topnav">
         <nav>
             <a href="{{ '/' | relative_url }}">Home</a>
-            <a href="{{ '/About Me' | relative_url }}">About Me</a>
-            <a href="{{ '/Projects' | relative_url }}">Projects</a>
-            <a href="{{ '/contact' | relative_url }}">Contact</a>
+            <a href="{{ '/about.html' | relative_url }}">About Me</a>
+            <a href="{{ '/projects.html' | relative_url }}">Projects</a>
+            <a href="{{ '/contact.html' | relative_url }}">Contact</a>
         </nav>
     </header>
 
+    <!-- Page Content -->
     <main class="content">
         {{ content }}
     </main>
 
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>
+            <span class="dot-blue">●</span>
+            Engineering • Simulation • Machine Learning
+            <span class="dot-blue">●</span><br>
+            <span class="tagline">Designing Smarter Systems</span><br><br>
+            <span class="copyright">© 2026 Tom Linsenmeyer</span>
+        </p>
+    </footer>
+
 </body>
 </html>
+
