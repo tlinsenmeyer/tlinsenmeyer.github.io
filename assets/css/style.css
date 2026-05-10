@@ -154,3 +154,17 @@ body {
 .tagline {
     color: #2EC4B6;
 }
+
+.banner-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0; /* remove rounding so it looks like a real hero header */
+}
+
