@@ -52,8 +52,7 @@ The full source repository for the `sim1-core` engine is hosted natively on my p
 
 To demonstrate my standards for modular, production-grade software engineering without exposing protected IP, the structural blueprint and decoupled interface hierarchy are mapped out below:
 
-```text
-sim1-core/
+<pre><code>sim1-core/
 ├── .github/workflows/       # CI/CD automated testing pipelines
 ├── config/
 │   ├── base_config.yaml     # Environment & execution hyperspace variables
@@ -80,7 +79,12 @@ sim1-core/
 │   ├── test_engine.py
 │   └── test_pipeline.py
 ├── pyproject.toml           # Modern build system backend specification (PEP 517)
-└── requirements.txt         # Clean, unpinned top-level deployment targets
+└── requirements.txt         # Clean, unpinned top-level deployment targets</code></pre>
+
+### 💡 Core Architectural Highlights Demonstrated Above:
+* **Polymorphism & Abstraction**: Utilizes strict Python Abstract Base Classes (`abc.ABC`) to decouple engine rules from execution frameworks.
+* **Asynchronous Buffer Management**: Implements non-blocking IO data pipelines for dynamic, high-throughput ingestion.
+* **Hardware Context Isolation**: Features automated telemetry guards that safely bind and optimize workloads across thread pools or native GPU/CUDA streams based on localized host hardware.
 
 # 2. Mechanical Airflow & Coil Sequence
 
