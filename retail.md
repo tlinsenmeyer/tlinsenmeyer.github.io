@@ -35,6 +35,8 @@ This project used 30 years of U.S. retail sales data to build forecasting models
 
 Time‑series forecasting is widely used in finance, retail, and operations. This project shows how different models handle real‑world disruptions and seasonal patterns.
 
+[View this Project Notebook (via nbviewer)](https://nbviewer.org/github/tlinsenmeyer/Retail-Sales/blob/main/Retail_Sales.ipynb)
+
 ---
 
 <p align="center" style="color:#C0C0C0; font-size: 0.9em;">
