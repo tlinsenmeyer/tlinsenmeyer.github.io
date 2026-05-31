@@ -43,7 +43,7 @@ This project focused on cleaning and analyzing a large USDA feed‑grains datase
 
 This project demonstrates large‑scale data cleaning, filtering, and integration — skills that translate directly to real‑world analytics work.
 
-[View my Project Notebook 2 (via nbviewer)](https://nbviewer.org/urls/github/tlinsenmeyer/main/DSC540-FinalProject-Linsenmeyer.ipynb)
+[View my Project Notebook 2 (via nbviewer)](https://nbviewer.org/urls/github.com/tlinsenmeyer/main/DSC540-FinalProject-Linsenmeyer.ipynb)
 
 ---
 <p align="center" style="color:#C0C0C0; font-size: 0.9em;">
