@@ -44,6 +44,8 @@ This project built a retrieval‑augmented generation (RAG) pipeline to answer q
 
 RAG is becoming a standard approach for enterprise AI systems. This project shows how retrieval can improve reliability and reduce hallucinations.
 
+[View this Project Notebook (via nbviewer)](https://nbviewer.org/github/tlinsenmeyer/Rag_with_Langchain/blob/main/rag_with_langchain.ipynb)
+
 ---
 
 <p align="center" style="color:#C0C0C0; font-size: 0.9em;">
