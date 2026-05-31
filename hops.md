@@ -33,6 +33,8 @@ This project explored whether climate change is affecting hop production in Yaki
 
 Climate change is a major concern for agriculture. This analysis shows how data can be used to validate or challenge assumptions about environmental impact.
 
+[View this Project Notebook (via nbviewer)](https://nbviewer.org/github/tlinsenmeyer/hops)
+
 ---
 
 <p align="center" style="color:#C0C0C0; font-size: 0.9em;">
