@@ -44,6 +44,8 @@ The SVM model performed the best once GPU acceleration was used, reducing traini
 
 Accurate occupancy prediction can improve HVAC efficiency, reduce energy waste, and support smart‑building automation. This project shows how machine learning can be applied to real operational problems.
 
+[View this Project Notebook (via nbviewer)](https://nbviewer.org/github/tlinsenmeyer/estimate_occupancy/blob/main/estimate_occupancy.ipynb)
+
 ---
 
 <p align="center" style="color:#C0C0C0; font-size: 0.9em;">
