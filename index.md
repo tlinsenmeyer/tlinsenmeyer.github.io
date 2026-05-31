@@ -66,7 +66,6 @@ But very few people understand all four — and that’s where the real value is
 
 </div>
 
-* [View my Project 1 Notebook (via nbviewer)](https://nbviewer.org/https://github.com/tlinsenmeyer/BarleyandClimateChange/blob/main/DSC540-FinalProject-Linsenmeyer.ipynb)
 
 ## Why I Built This Portfolio
 I wanted a place to organize the work I've done—not just the final results, but the process behind them. A lot of what I do blends engineering, programming, and applied analytics, and this site gives me a place to show that work clearly.

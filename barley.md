@@ -52,3 +52,5 @@ This project demonstrates large‑scale data cleaning, filtering, and integratio
   <span style="color:#2EC4B6;">Designing Smarter Systems</span><br><br>
   <span style="color:#777777;">© 2026 Tom Linsenmeyer</span>
 </p>
+
+[View my Project 1 Notebook (via nbviewer)](https://nbviewer.org/https://github.com/tlinsenmeyer/BarleyandClimateChange/blob/main/DSC540-FinalProject-Linsenmeyer.ipynb)
