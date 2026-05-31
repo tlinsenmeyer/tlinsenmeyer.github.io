@@ -44,6 +44,44 @@ SIM‑1 consists of four core subsystems:
 
 ---
 
+---
+
+## 📁 Project Architecture: Dynamic Polymorphic Simulation Engine (SIM-1)
+
+The full source repository for the `sim1-core` engine is hosted natively on my private network infrastructure to protect proprietary development configurations and core intellectual property. 
+
+To demonstrate my standards for modular, production-grade software engineering without exposing protected IP, the structural blueprint and decoupled interface hierarchy are mapped out below:
+
+```text
+sim1-core/
+├── .github/workflows/       # CI/CD automated testing pipelines
+├── config/
+│   ├── base_config.yaml     # Environment & execution hyperspace variables
+│   └── logging.json         # Structured enterprise logging configurations
+├── src/
+│   ├── __init__.py
+│   ├── engine/              # Engine abstraction layer
+│   │   ├── __init__.py
+│   │   ├── base_engine.py   # Abstract Base Class (ABC) defining structural interfaces
+│   │   ├── polymorphic.py   # Dynamic polymorphic engine loader factory logic
+│   │   └── implementations/ # Decoupled functional logic execution blocks
+│   │       ├── __init__.py
+│   │       ├── static_flow.py
+│   │       └── dynamic_transient.py
+│   ├── pipeline/            # Decoupled MLOps / Data Engineering stages
+│   │   ├── __init__.py
+│   │   ├── ingest.py        # Asynchronous multi-node connection buffers
+│   │   ├── transform.py     # Functional matrix manipulation steps
+│   │   └── export.py        # Abstract database transaction boundary layer
+│   └── utils/
+│       ├── __init__.py
+│       └── hardware.py      # CUDA / Hardware resource telemetry checking
+├── tests/                   # Strict unit & integration testing matrices
+│   ├── test_engine.py
+│   └── test_pipeline.py
+├── pyproject.toml           # Modern build system backend specification (PEP 517)
+└── requirements.txt         # Clean, unpinned top-level deployment targets
+
 # 2. Mechanical Airflow & Coil Sequence
 
 <p align="center">
@@ -181,29 +219,6 @@ Planned enhancements:
 - ML‑driven supervisory control  
 
 ---
-
-# 1.1 SIM‑1 Project Structure
-
-<p align="center">
-  <img src="sim1_tree.png" width="90%" />
-</p>
-
-<p align="center"><em>Figure — SIM‑1 Codebase Directory Tree</em></p>
-
-The SIM‑1 codebase is organized into modular subsystems that mirror the real AHU’s physical and logical components.  
-The structure includes:
-
-- **engine/** — core simulation engine  
-- **ahu/** — AHU logic, tools, and control loops  
-- **common/** — shared physics, telemetry, scheduling, and rule‑processing modules  
-- **plant/** — plant‑level models (pumps, converters, steam, etc.)  
-- **system/** — system‑level orchestration and integration  
-- **logging/** — trend writers and loggers  
-- **config/** — configuration files  
-- **tests/** — unit and integration tests  
-
-This tree provides a high‑level view of how SIM‑1’s physics, control logic, and data pipelines are structured in code.
-
 
 ---
 
