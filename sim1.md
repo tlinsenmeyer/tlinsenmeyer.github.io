@@ -182,6 +182,31 @@ Planned enhancements:
 
 ---
 
+# 1.1 SIM‑1 Project Structure
+
+<p align="center">
+  <img src="sim1_tree.png" width="90%" />
+</p>
+
+<p align="center"><em>Figure — SIM‑1 Codebase Directory Tree</em></p>
+
+The SIM‑1 codebase is organized into modular subsystems that mirror the real AHU’s physical and logical components.  
+The structure includes:
+
+- **engine/** — core simulation engine  
+- **ahu/** — AHU logic, tools, and control loops  
+- **common/** — shared physics, telemetry, scheduling, and rule‑processing modules  
+- **plant/** — plant‑level models (pumps, converters, steam, etc.)  
+- **system/** — system‑level orchestration and integration  
+- **logging/** — trend writers and loggers  
+- **config/** — configuration files  
+- **tests/** — unit and integration tests  
+
+This tree provides a high‑level view of how SIM‑1’s physics, control logic, and data pipelines are structured in code.
+
+
+---
+
 <p align="center" style="color:#C0C0C0; font-size: 0.9em;">
   <span style="color:#00AEEF;">●</span>
   Engineering • Simulation • Machine Learning
